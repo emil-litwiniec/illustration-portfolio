@@ -1,0 +1,42 @@
+.header {
+    // background-image: url(../img/pierogi.jpg);
+    // background-size: 100%;
+    // background-position: 0 100%;
+    // height: 110vh;   
+    // width: 110vw; 
+    // top: -10rem;
+
+    grid-row: 1/2;
+
+    
+}
+
+
+
+.hero {
+    background-image: linear-gradient(rgba(#1A2669, .2), rgba(#1A2669, .2)) ,url(../img/pierogi.jpg);
+    background-size: 100%;
+    background-position: 0 100%;
+    height: 100vh;   
+    // top: -10rem;
+}
+
+.header {
+    // position: relative;
+    // display: flex;
+    // justify-content: flex-end;
+    &__text {
+        // position: absolute;
+        // top: 60vh;
+        // right: 15vh;
+
+        margin-top: 60vh;
+        margin-right: 10vh;
+        display: flex;
+        flex-direction: column;
+  
+        align-items: flex-end; 
+        padding-left: 20rem;
+    }
+}
+

@@ -1,0 +1,42 @@
+.main {
+    background-color: #e5e5e5;
+    z-index: 10;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+
+.work {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: max-content 100rem 20rem;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+.my-gallery {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+
+    figure {
+        height: 36rem;
+        width: 36rem;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.info {
+    grid-row: 2/ -1;
+}

@@ -1,0 +1,28 @@
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    color: #e5e5e5;
+    position: relative;
+}
+.container {
+    display: grid;
+    grid-template-rows: max-content 200rem 20rem;
+    grid-template-columns: 1fr;
+    transition: all 1s ease-in-out;
+}
