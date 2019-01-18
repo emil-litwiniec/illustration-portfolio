@@ -4,9 +4,6 @@
     &__sticky {
         width: 100%;
         height: 5vh;
-        // background: linear-gradient(to bottom, 
-        // rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
-        background-color: $color-primary-2;
         color: $color-primary-3;
         position: fixed;
         opacity: 0;
@@ -36,6 +33,7 @@
                 text-decoration: none;
                 color: $color-primary-1;
                 z-index: 180;
+                padding: 3rem;
             }
         
         &--lang {

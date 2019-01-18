@@ -1,7 +1,9 @@
 .heading-1 {
   font-size: 8rem;
   font-weight: 200;
-  color: #FBFBFB; }
+  color: #FBFBFB;
+  line-height: 75%;
+  letter-spacing: 15%; }
 
 .heading-2 {
   font-size: 3.3rem;
@@ -24,7 +26,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 50%;
   scroll-behavior: smooth; }
 
 body {
@@ -35,7 +37,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: max-content 200rem 20rem;
+  grid-template-rows: max-content min-content 20rem;
   grid-template-columns: 1fr;
   transition: all 1s ease-in-out; }
 
@@ -56,19 +58,72 @@ body {
   align-items: flex-end;
   padding-left: 20rem; }
 
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  display: block;
+  text-align: center;
+  font-size: 20rem;
+  z-index: 100;
+  text-decoration: none;
+  width: 5rem;
+  height: 5rem;
+  border-bottom: 4px solid rgba(251, 251, 251, 0.2);
+  border-right: 4px solid rgba(251, 251, 251, 0.2);
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 5s ease-in-out infinite;
+  -moz-animation: fade_move_down 5s ease-in-out infinite;
+  animation: fade_move_down 5s ease-in-out infinite; }
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0; } }
+
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0; } }
+
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0; } }
+
 .main {
   background-color: #e5e5e5;
   z-index: 10;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-rows: 3fr 1fr;
-  grid-template-columns: 2fr 6fr 2fr; }
+  grid-template-rows: max-content max-content;
+  grid-template-columns: 2fr min-content 2fr; }
 
 .work {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-rows: max-content 100rem 20rem; }
+  grid-template-rows: max-content 60% 20rem; }
   .work__header {
     display: flex;
     justify-content: center;
@@ -78,27 +133,62 @@ body {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5rem; }
+  grid-gap: .8rem; }
   .my-gallery figure {
-    height: 36rem;
-    width: 36rem; }
+    height: 33rem;
+    width: 33rem; }
     .my-gallery figure img {
+      object-fit: cover;
       height: 100%;
       width: 100%; }
 
 .info {
-  grid-row: 2/ -1; }
+  grid-row: 2/ -1;
+  grid-column: 2 /3;
+  display: grid;
+  grid-template-rows: min-content .8fr 2fr .33fr .66fr .33fr 20rem;
+  grid-template-columns: 1fr 5fr 1fr 5fr 1fr; }
+  .info__header {
+    grid-column: 1 / -1;
+    text-align: center; }
+  .info__text {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    color: #5f4f4f;
+    font-size: 1.7rem;
+    text-align: justify;
+    z-index: 1; }
+  .info__contact {
+    grid-row: 5 / 7;
+    grid-column: 1 / 3;
+    color: #5f4f4f;
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem; }
+    .info__contact-touch {
+      font-size: 1.7rem;
+      text-transform: uppercase; }
+  .info__img {
+    grid-row: 3 / 6;
+    grid-column: 3 / 5;
+    object-fit: cover;
+    width: 110%; }
 
 .footer {
   background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/pierogi.jpg);
   background-size: 100%;
   background-position: 0 100%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .footer__text {
+    font-size: 1.4rem;
+    letter-spacing: 40%; }
 
 .nav-bar__sticky {
   width: 100%;
   height: 5vh;
-  background-color: #e5e5e5;
   color: #5f4f4f;
   position: fixed;
   opacity: 0;
@@ -119,7 +209,8 @@ body {
   .nav-bar__item a {
     text-decoration: none;
     color: #FBFBFB;
-    z-index: 180; }
+    z-index: 180;
+    padding: 3rem; }
   .nav-bar__item--lang {
     justify-self: flex-start;
     margin-left: 10rem; }

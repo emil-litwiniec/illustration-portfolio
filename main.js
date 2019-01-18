@@ -1,5 +1,5 @@
 window.addEventListener("scroll",function(){
-    var h = window.innerHeight;
+    var h = window.innerHeight - 20;
     var target = document.querySelector('.nav-bar__sticky');
     // var val = document.getElementsByTagName('p');
     if(window.pageYOffset > h){
