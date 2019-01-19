@@ -19,10 +19,21 @@ body {
     font-weight: 300;
     color: #e5e5e5;
     position: relative;
+    // overflow: hidden;
 }
 .container {
     display: grid;
     grid-template-rows: max-content min-content 20rem;
     grid-template-columns: 1fr;
     transition: all 1s ease-in-out;
+}
+
+// UTILITY CLASSES
+
+.pt-md {
+    padding-top: 15rem;
+}
+
+.pb-md {
+    padding-bottom: 15rem;
 }

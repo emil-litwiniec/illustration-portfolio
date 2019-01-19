@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Martel+Sans|Martel:200,300" rel="stylesheet">
-
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="photoswipe/dist/photoswipe.css"> 
     
     <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
@@ -28,11 +28,14 @@
     <header class="header hero rellax" data-rellax-speed="-5">
             <nav class="nav-bar">
                     <ul class="nav-bar__panel">
-                        <li class="nav-bar__item nav-bar__item--lang">pl/en</li>
-                        <div class="nav-bar__item--menu">
-                            <li class="nav-bar__item"><a href="#work">work</a></li>
-                            <li class="nav-bar__item"><a href="#info">info</a></li>
-                        </div>
+                            <div class="nav-bar__panel--left">
+                                
+                                    <li class="nav-bar__item nav-bar__item--lang">pl/en</li>
+                                </div>
+                                <div class="nav-bar__panel--right">
+                                    <li class="nav-bar__item"><a href="#work">work</a></li>
+                                    <li class="nav-bar__item"><a href="#info">info</a></li>
+                                </div>
                     </ul>
                 </nav>
         
@@ -43,12 +46,18 @@
         <div class="scroll-down"></div>
     </header>
     <main class="main">
-        <section class="work" id="work">
-            <div class="work__header">
-                <h3 class="heading-3">work</h3>
+            <div class="nav">
+                    <div class="nav__items">
+                        <li class="nav__items--link"><a id="work-link" href="#work">work</a></li>
+                        <li class="nav__items--link"><a id="info-link" href="#info">info</a></li>
+                    </div>
             </div>
+        <section class="work" id="work">
+            <!-- <div class="work__header">
+                <h3 class="heading-3">work</h3>
+            </div> -->
 
-            <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <div class="my-gallery pt-md" itemscope itemtype="http://schema.org/ImageGallery">
 
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
         <a href="img/il-1.jpg" itemprop="contentUrl" data-size="900x700">
@@ -113,12 +122,89 @@
         <figcaption itemprop="caption description"></figcaption>
     </figure>
 
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-7.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-7.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-8.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-8.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-9.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-9.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-3.jpg" itemprop="contentUrl" data-size="1200x1200">
+            <img src="img/il-3.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-4.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-4.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-5.jpg" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-5.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-6.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-6.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-3.jpg" itemprop="contentUrl" data-size="1200x1200">
+            <img src="img/il-3.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-4.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-4.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-5.jpg" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-5.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="img/il-6.png" itemprop="contentUrl" data-size="600x600">
+            <img src="img/il-6.png" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"></figcaption>
+    </figure>
+
 
 </div>
         </section>
-        <section class="info" id="info">
-                <h3 class="heading-3 info__header">info</h3>
-            <p class="info__text paragraph">
+        <section class="info pt-md pb-md" id="info">
+                <!-- <h3 class="heading-3 info__header">info</h3> -->
+            <p class="info__text ">
                     Curabitur luctus magna diam, et molestie sapien consequat non. 
                     Sed tincidunt mauris augue, vitae volutpat lacus viverra at. 
                     Vestibulum dictum efficitur pellentesque. Vivamus egestas metus 
@@ -162,17 +248,22 @@
         <p class="footer__text">love</p>
     </footer>
 
- <!--          STICKY NAV-BAR             -->
-
+ <!--          STICKY NAV-BAR MOBILE             -->
+<!-- 
     <nav class="nav-bar__sticky">
         <ul class="nav-bar__panel">
-            <li class="nav-bar__item nav-bar__item--lang nav-bar__item--sticky">pl/en</li>
-            <div class="nav-bar__item--menu">
-                <li class="nav-bar__item nav-bar__item--sticky"><a href="#work">work</a></li>
-                <li class="nav-bar__item nav-bar__item--sticky"><a href="#info">info</a></li>
+            <div class="nav-bar__panel--left">
+                <li class="nav-bar__item nav-bar__item--emil nav-bar__item--sticky ">EL</li>
+                
+            </div>
+            <div class="nav-bar__panel--right">
+                <div class="nav-bar__items">
+                    <li class="nav-bar__item nav-bar__item--sticky"><a id="work-link" href="#work">work</a></li>
+                    <li class="nav-bar__item nav-bar__item--sticky"><a id="info-link" href="#info">info</a></li>
+                </div>
             </div>
         </ul>
-    </nav>
+    </nav> -->
 
     <!--    PHOTOSWIPE       -->
 

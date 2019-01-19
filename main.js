@@ -1,14 +1,39 @@
-window.addEventListener("scroll",function(){
+    const infoPosition = document.querySelector("#info").offsetTop;
+    const workPosition = document.querySelector("#work").offsetTop;
+    const infoLink = document.querySelector("#info-link");
+    const workLink = document.querySelector("#work-link");
+
+const addClassOnScroll = window.addEventListener("scroll", () => {
+    let windowPosition = window.scrollY;
+    let threshold = 100;
+
+    
+      if (windowPosition > workPosition && windowPosition  < infoPosition) {
+          workLink.classList.add("active");
+          infoLink.classList.remove("active");
+    }
+
+    if(windowPosition >= infoPosition - threshold) {
+        workLink.classList.remove("active");
+        infoLink.classList.add("active");
+    }
+}, false)
+
+const showNavOnScroll = window.addEventListener("scroll",function(){
     var h = window.innerHeight - 20;
-    var target = document.querySelector('.nav-bar__sticky');
-    // var val = document.getElementsByTagName('p');
+    var target = document.querySelector('.nav');
     if(window.pageYOffset > h){
      target.style.opacity = "1"; 
     }
     else if(window.pageYOffset < h){
       target.style.opacity = "0";
     }
-    // val[0].innerHTML = 'PageYOffset = ' + window.pageYOffset;
+
+    if(window.pageYOffset > h - 25) {
+        target.style.display = ""
+    } else if (window.pageYOffset < h - 25) {
+        target.style.display = "none";
+    }
   }, false);
 
   var initPhotoSwipeFromDOM = function(gallerySelector) {

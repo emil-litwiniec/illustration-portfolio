@@ -8,10 +8,11 @@
 }
 
 .work {
+    position: relative;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-rows: max-content 60% 20rem;
+    grid-template-rows: 60% 20rem;
 
     &__header {
         display: flex;
@@ -21,13 +22,14 @@
 }
 
 .my-gallery {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1.2fr;
     grid-gap: .8rem;
 
     figure {
-        height: 33rem;
+        height: 37rem;
         width: 33rem;
         // height: 100%;
         // weight: 100%;
@@ -45,16 +47,19 @@
     grid-column: 2 /3;
 
     display: grid;
-    grid-template-rows: min-content .8fr 2fr .33fr .66fr .33fr 20rem;
+    grid-template-rows: .8fr 2fr .33fr .66fr .33fr 8rem;
     grid-template-columns:  1fr 5fr 1fr 5fr 1fr;
 
-    &__header {
-        grid-column: 1 / -1;
-        text-align: center;
-    }
+    font-family: $font-secondary;
+
+    // &__header {
+    //     grid-column: 1 / -1;
+    //     text-align: center;
+    //     font-family: $font-primary;
+    // }
 
     &__text {
-        grid-row: 2 / 4;
+        grid-row: 1 / 3;
         grid-column: 2 / 4;
 
         color: $color-primary-3;
@@ -64,7 +69,7 @@
     }
 
     &__contact {
-        grid-row: 5 / 7;
+        grid-row: 4 / 6;
         grid-column: 1 / 3;
         color: $color-primary-3;
         font-size: 1.7rem;
@@ -78,7 +83,7 @@
     }
     
     &__img {
-        grid-row: 3 / 6;
+        grid-row: 2 / 5;
         grid-column: 3 / 5;
 
         object-fit: cover;
