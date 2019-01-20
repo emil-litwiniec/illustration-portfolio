@@ -91,3 +91,24 @@
         
     }
 }
+
+.logo-container {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50rem;
+
+    position: sticky;
+    top: 0;
+
+    transition: all .5s ease-in-out;
+
+    &__logo {
+        height: 5rem;
+        margin-top: 10rem;
+    
+    }
+}

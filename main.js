@@ -19,21 +19,40 @@ const addClassOnScroll = window.addEventListener("scroll", () => {
     }
 }, false)
 
-const showNavOnScroll = window.addEventListener("scroll",function(){
+const showOnScroll = window.addEventListener("scroll",function(){
     var h = window.innerHeight - 20;
-    var target = document.querySelector('.nav');
-    if(window.pageYOffset > h){
-     target.style.opacity = "1"; 
-    }
-    else if(window.pageYOffset < h){
-      target.style.opacity = "0";
-    }
+    var target = document.querySelectorAll('.showOnScroll');
 
-    if(window.pageYOffset > h - 25) {
-        target.style.display = ""
-    } else if (window.pageYOffset < h - 25) {
-        target.style.display = "none";
-    }
+
+    target.forEach((item) => {
+        if(window.pageYOffset > h){
+            item.style.opacity = "1"; 
+           }
+           else if(window.pageYOffset < h){
+             item.style.opacity = "0";
+           }
+       
+           if(window.pageYOffset > h - 25) {
+               item.style.display = ""
+           } else if (window.pageYOffset < h - 25) {
+               item.style.display = "none";
+           }
+    })
+    // target.forEach((h) => {
+
+    // })
+    // if(window.pageYOffset > h){
+    //  target.style.opacity = "1"; 
+    // }
+    // else if(window.pageYOffset < h){
+    //   target.style.opacity = "0";
+    // }
+
+    // if(window.pageYOffset > h - 25) {
+    //     target.style.display = ""
+    // } else if (window.pageYOffset < h - 25) {
+    //     target.style.display = "none";
+    // }
   }, false);
 
   var initPhotoSwipeFromDOM = function(gallerySelector) {

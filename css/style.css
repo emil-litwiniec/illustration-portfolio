@@ -179,6 +179,20 @@ body {
     object-fit: cover;
     width: 110%; }
 
+.logo-container {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50rem;
+  position: sticky;
+  top: 0;
+  transition: all .5s ease-in-out; }
+  .logo-container__logo {
+    height: 5rem;
+    margin-top: 10rem; }
+
 .footer {
   background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/pierogi.jpg);
   background-size: 100%;
