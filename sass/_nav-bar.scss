@@ -125,7 +125,11 @@
                     transform: translateZ(0);
                     // color: $color-pink-1;
                     text-shadow: 0 .5rem 2rem rgba($color-blue-1, 1);
-                    transform: translateY(-1rem);
+                    transform: translateY(-.5rem);
+                }
+
+                &:active {
+                    transform: translateY(.5rem);
                 }
             }
         

@@ -49,6 +49,7 @@
     display: grid;
     grid-template-rows: .8fr 2fr .33fr .66fr .33fr 8rem;
     grid-template-columns:  1fr 5fr 1fr 5fr 1fr;
+    grid-gap: .5rem;
 
     font-family: $font-secondary;
 
@@ -85,9 +86,10 @@
     &__img {
         grid-row: 2 / 5;
         grid-column: 3 / 5;
-
-        object-fit: cover;
-        width: 110%;
+        margin-left: 6rem;
+        // object-fit: cover;
+        // margin-right: 10rem;
+        width: 80%;
         
     }
 }
