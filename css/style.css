@@ -51,9 +51,9 @@ body {
   grid-row: 1/2; }
 
 .hero {
-  background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/pierogi.jpg);
+  background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/hero-2x-min.png);
   background-size: 100%;
-  background-position: 0 100%;
+  background-position: 0 0;
   height: 100vh; }
 
 .header__text {
@@ -190,13 +190,13 @@ body {
   top: 0;
   transition: all .5s ease-in-out; }
   .logo-container__logo {
-    height: 5rem;
+    height: 4rem;
     margin-top: 10rem; }
 
 .footer {
-  background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/pierogi.jpg);
+  background-image: linear-gradient(rgba(26, 38, 105, 0.2), rgba(26, 38, 105, 0.2)), url(../img/hero-2x-min.png);
   background-size: 100%;
-  background-position: 0 100%;
+  background-position: 0 95%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -218,12 +218,79 @@ body {
   opacity: 0;
   transition: all .5s ease-in-out; }
   .nav__items {
+    list-style: none;
     margin-top: 10rem; }
     .nav__items--link {
       font-size: 2.1rem;
       cursor: pointer; }
       .nav__items--link a {
-        text-decoration: none; }
+        color: rgba(26, 38, 105, 0.2);
+        text-decoration: none;
+        transition: all .3s ease; }
+        .nav__items--link a:hover {
+          color: #1a2669; }
+
+.nav-bar {
+  margin-top: 5rem; }
+  .nav-bar__sticky {
+    width: 100%;
+    height: 5vh;
+    color: #5f4f4f;
+    position: fixed;
+    opacity: 0;
+    z-index: 150;
+    transition: all .1s ease-in; }
+  .nav-bar__panel {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; }
+    .nav-bar__panel-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15rem; }
+      .nav-bar__panel-left--logo {
+        height: 5rem;
+        opacity: .9; }
+    .nav-bar__panel-right {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 2rem;
+      margin-right: 15rem; }
+  .nav-bar__item {
+    font-size: 2.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nav-bar__item a {
+      text-decoration: none;
+      color: #FBFBFB;
+      z-index: 180;
+      padding: 2rem 2rem;
+      transition: all .3s ease; }
+      .nav-bar__item a:hover {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1, 1);
+        transform: translateZ(0);
+        text-shadow: 0 0.5rem 2rem #1a2669;
+        transform: translateY(-1rem); }
+    .nav-bar__item--emil {
+      font-family: "Martel Sans", sans-serif;
+      color: #1a2669; }
+    .nav-bar__item--sticky {
+      margin-top: 1rem;
+      font-size: 2.1rem;
+      text-decoration: none;
+      cursor: pointer; }
+      .nav-bar__item--sticky a {
+        text-decoration: none;
+        color: #5f4f4f;
+        z-index: 180;
+        transition: all .1s ease-in-out; }
 
 .active {
+  transition: all .5s ease-in-out;
   color: #ca676d !important; }
