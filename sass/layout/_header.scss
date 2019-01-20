@@ -80,3 +80,10 @@
   50%  { opacity: 1;  }
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
+
+
+.language-change {
+    font-size: 3rem;
+    text-decoration: none;
+    color: $color-primary-1;
+}

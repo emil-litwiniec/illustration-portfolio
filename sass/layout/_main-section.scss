@@ -12,7 +12,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-rows: 60% 20rem;
+    grid-template-rows: 1fr 20rem;
 
     &__header {
         display: flex;

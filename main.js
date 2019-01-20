@@ -3,6 +3,67 @@
     const infoLink = document.querySelector("#info-link");
     const workLink = document.querySelector("#work-link");
 
+// data reload anchor
+    // const dataReload = document.querySelectorAll("[data-reload]");
+
+// Language translation
+    const language = {
+        en: {
+            welcome: "Chicken love!"
+        },
+        pl: {
+            welcome: "Kurczakowa miłość!"
+        }
+    };
+
+//     // Define language via window hash
+    const chicken = document.getElementById("chicken");
+    const pl = document.querySelector("[data-pl]");
+    const en = document.querySelector("[data-en]");
+
+    if(window.location.hash) {
+        if (window.location.hash === "#pl") {
+            chicken.textContent = language.pl.welcome;
+        } else if (window.location.hash === "#en") {
+            chicken.textContent = language.en.welcome;
+        }
+    }
+pl.onclick = function() {
+    if(window.location.hash) {
+        if (window.location.hash === "#pl") {
+            chicken.textContent = language.pl.welcome;
+        } else if (window.location.hash === "#en") {
+            chicken.textContent = language.en.welcome;
+        }
+    }
+    location.reload();
+}
+en.onclick = function() {
+    if(window.location.hash) {
+        if (window.location.hash === "#pl") {
+            chicken.textContent = language.pl.welcome;
+        } else if (window.location.hash === "#en") {
+            chicken.textContent = language.en.welcome;
+        }
+    }
+    location.reload();
+}
+    
+
+    // dataReload.forEach((data) => data.onclick = function() {
+    //     location.reload(true);
+    // })
+
+    // for (var i = 0; i < dataReload.length; i++) {
+    //  dataReload[i].onclick = function() { 
+    //      location.reload(false)};
+    // }
+//     // for(let i = 0; i <= dataReload.length; i++) {
+//     //     dataReload[i].onclick = function() {
+//     //         location.reload(true);
+//     //     }
+
+//     };
 const addClassOnScroll = window.addEventListener("scroll", () => {
     let windowPosition = window.scrollY;
     let threshold = 100;
