@@ -3,37 +3,95 @@
     const infoLink = document.querySelector("#info-link");
     const workLink = document.querySelector("#work-link");
 
-// data reload anchor
-    // const dataReload = document.querySelectorAll("[data-reload]");
 
 // Language translation
     const language = {
         en: {
-            welcome: "Chicken love!"
+            illustrator: "illustrator",
+            figcaptions: {
+                1: "English caption",
+                2: "frog"
+            },
+            work: "work",
+            info: "about me",
+            infoText: "Village did removed enjoyed explain nor ham saw calling talking. Securing as informed declared or margaret. Joy horrible moreover man feelings own shy. Request norland neither mistake for yet. Between the for morning assured country believe. On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. Wrong do point avoid by fruit learn or in death. So passage however besides invited comfort elderly be me. Walls began of child civil am heard hoped my. Satisfied pretended mr on do determine by. Old post took and ask seen fact rich. Man entrance settling believed eat joy. Money as drift begin on to. Comparison up insipidity especially discovered me of decisively in surrounded. Points six way enough she its father. Folly sex downs tears ham green forty. ",
+            infoContactTouch: "Get in touch",
+            infoContactText: "If you'd like to know more about me or talk about working together. "
         },
         pl: {
-            welcome: "Kurczakowa miłość!"
-        }
+            illustrator: "ilustrator",
+            figcaptions: {
+                1: "Polski opis do zdjęcia",
+                2: "żabka"
+            },
+            work: "prace",
+            info: "o mnie",
+            infoText: "Stąd Niesiołowskiemu mocno ognia mają nisko  Wyżółkłych roskrzyżował imał ubóstwiałbym widne ogona Nawet nocą Przed szczególniéj. Spokojniejszych Dojeżdżaczowi skarb Wilna Kiedy rosciągnionych deski prawy Przedstawiając przejrzystość prawo. Niźli Białopiotrowiczem Topoli blisko dworze naród domów granie mnicha. Żołniersczyzny ncci ludu mury tuż czem najpiękniejszym Mnie buku lata nierostrzygniony. Dwór ochłonął szlacheckim ranne niechętnie serce licem innem nagle deski. Koń szli Plac ruch zastępstwie przeskoczyć niby damy rodu krużgankiem okno. Jaki niecierpliwa zwierciadeł wozy owoc dojeżdżacz głębokiém krew przedmiotach Nieszanując. Zaś wyciągniętą Gors susy ubóstwiałbym nieuszanowanie buku zaczerwienione Prześladując woń mój rostrzygnienie. Romansową młodziana przestanku taka Pana Dóm Syna lisa dano Roznoszono Zaszumiał młodzież. ",
+            infoContactTouch: "Kontakt",
+            infoContactText: "Jeśli chciałbyś dowiedzieć się o mnie więcej i porozmawiać o współpracy, daj mi znać!"
+            }
     };
 
+    const ids = document.querySelectorAll("[data-id]");
+    const imgs = document.querySelectorAll("[data-nr]");
+    // let arr = Array.from(imgs);
+    
+    // console.log(arr);
+
+    // let changeIdToPl = () =>  {
+    //     ids.forEach((el) => {
+    //         let dataId = el.dataset.id;
+        
+    //         el.innerText = language.pl[dataId];
+    //     })
+    // };
+
+    // changeIdToPl();
+
+    let translateToPl = () =>  {
+        imgs.forEach((fig) => {
+            let dataNr = fig.dataset.nr;
+            fig.innerText = language.pl.figcaptions[dataNr];
+        })
+
+        ids.forEach((el) => {
+            let dataId = el.dataset.id;
+            el.innerText = language.pl[dataId];
+        })
+    };
+    let translateToEn  = () =>   {
+        imgs.forEach((fig) => {
+            let dataNr = fig.dataset.nr;
+            fig.innerText = language.en.figcaptions[dataNr];
+        })
+
+        ids.forEach((el) => {
+            let dataId = el.dataset.id;
+        
+            el.innerText = language.en[dataId];
+        })
+    };
+
+
 //     // Define language via window hash
-    const chicken = document.getElementById("chicken");
+    // const chicken = document.getElementById("chicken");
     const pl = document.querySelector("[data-pl]");
     const en = document.querySelector("[data-en]");
 
     if(window.location.hash) {
         if (window.location.hash === "#pl") {
-            chicken.textContent = language.pl.welcome;
+            translateToPl();
         } else if (window.location.hash === "#en") {
-            chicken.textContent = language.en.welcome;
+            translateToEn();
         }
     }
 pl.onclick = function() {
     if(window.location.hash) {
         if (window.location.hash === "#pl") {
-            chicken.textContent = language.pl.welcome;
+            translateToPl();
+            
         } else if (window.location.hash === "#en") {
-            chicken.textContent = language.en.welcome;
+            translateToEn();
         }
     }
     location.reload();
@@ -41,29 +99,15 @@ pl.onclick = function() {
 en.onclick = function() {
     if(window.location.hash) {
         if (window.location.hash === "#pl") {
-            chicken.textContent = language.pl.welcome;
+            translateToPl();
         } else if (window.location.hash === "#en") {
-            chicken.textContent = language.en.welcome;
+            translateToEn();
         }
     }
     location.reload();
 }
     
 
-    // dataReload.forEach((data) => data.onclick = function() {
-    //     location.reload(true);
-    // })
-
-    // for (var i = 0; i < dataReload.length; i++) {
-    //  dataReload[i].onclick = function() { 
-    //      location.reload(false)};
-    // }
-//     // for(let i = 0; i <= dataReload.length; i++) {
-//     //     dataReload[i].onclick = function() {
-//     //         location.reload(true);
-//     //     }
-
-//     };
 const addClassOnScroll = window.addEventListener("scroll", () => {
     let windowPosition = window.scrollY;
     let threshold = 100;

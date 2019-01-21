@@ -1,5 +1,6 @@
 
 
+
 *,
 *::after,
 *::before {
@@ -10,8 +11,12 @@
 
 html {
     box-sizing: border-box;
-    font-size: 50%;
+    font-size: 50%; // ==> 8px
     scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 45%;
+    }
 }
 
 body {
@@ -23,9 +28,13 @@ body {
 }
 .container {
     display: grid;
-    grid-template-rows: max-content min-content 20rem;
+    grid-template-rows: max-content max-content 20rem;
     grid-template-columns: 1fr;
     transition: all 1s ease-in-out;
+
+    @media only screen and (max-width: $bp-medium) {
+        overflow:hidden;
+    }
 }
 
 // UTILITY CLASSES

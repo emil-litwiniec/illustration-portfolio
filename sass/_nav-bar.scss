@@ -16,6 +16,9 @@
 
     transition: all .5s ease-in-out;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
     &__items {
 
         list-style: none;
@@ -24,6 +27,10 @@
         &--link {
             font-size: 2.1rem;
             cursor: pointer;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 3.4rem;
+            }
             
             a {
                 // opacity: .2;

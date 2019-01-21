@@ -22,7 +22,9 @@
 
     <title>Emil Litwiniec - illustrator</title>
 </head>
-<body class="container">
+
+<body>
+<div class="container">
 
     
     <header class="header hero rellax" data-rellax-speed="-5">
@@ -34,18 +36,19 @@
                             </div>
                             <div class="nav-bar__panel-right">
                                     <!-- <li class="nav-bar__item nav-bar__item--lang">pl/en</li> -->
-                                    <li class="nav-bar__item"><a href="#work">work</a></li>
-                                    <li class="nav-bar__item"><a href="#info">info</a></li>
+                                    <li class="nav-bar__item"><a href="#work" data-id="work">work</a></li>
+                                    <li class="nav-bar__item"><a href="#info" data-id="info">info</a></li>
                                 </div>
                     </ul>
                 </nav>
         
         <div class="header__text rellax" data-rellax-speed="-1">
             <h1 class="heading-1 ">Emil Litwiniec</h1>
-            <h3 class="heading-2">illustrator</h3>
-            <a class="language-change" href="#pl" data-pl>pl</a>
-            <a class="language-change" href="#en"  data-en>en</a>
-            <p id="chicken" class="language-change">Chicken love!</p>
+            <h3 class="heading-2" data-id="illustrator">illustrator</h3>
+            <div class="language">
+                <a class="language-change" href="#pl" data-pl>pl</a>
+                <a class="language-change" href="#en"  data-en>en</a>
+            </div>
         </div>
         <div class="scroll-down"></div>
     </header>
@@ -55,8 +58,8 @@
                 </div>
             <div class="nav showOnScroll">
                     <ul class="nav__items">
-                        <li class="nav__items--link"><a id="work-link" href="#work">work</a></li>
-                        <li class="nav__items--link"><a id="info-link" href="#info">info</a></li>
+                        <li class="nav__items--link"><a id="work-link" href="#work" data-id="work">work</a></li>
+                        <li class="nav__items--link"><a id="info-link" href="#info" data-id="info">info</a></li>
                     </ul>
             </div>
         <section class="work" id="work">
@@ -68,16 +71,33 @@
 
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-1-1x-min.jpg" itemprop="contentUrl" data-size="1500x1500">
-                    <img src="img/il-1-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
+                    <img 
+                    srcset="img/il-1-thumbnail-small-min.jpg 400w,
+                            img/il-1-thumbnail-min.jpg 800w" 
+                    sizes="(max-width: 400px) 360px,
+                            800px"
+
+                    src="img/il-1-thumbnail-min.jpg"
+                    itemprop="thumbnail" 
+                    alt="Illustration" />
                 </a>
-                <figcaption itemprop="caption description"></figcaption>
+
+                <!-- <img srcset="elva-fairy-320w.jpg 320w,
+                            elva-fairy-480w.jpg 480w,
+                            elva-fairy-800w.jpg 800w"
+                    sizes="(max-width: 320px) 280px,
+                            (max-width: 480px) 440px,
+                            800px"
+                    src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"> -->
+
+                <figcaption itemprop="caption description" data-nr="1">Chicken</figcaption>
             </figure>
 
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-2-1x-min.jpg" itemprop="contentUrl" data-size="1500x1682">
                     <img src="img/il-2-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
-                <figcaption itemprop="caption description"></figcaption>
+                <figcaption itemprop="caption description" data-nr="2">Duck</figcaption>
             </figure>
 
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -89,7 +109,7 @@
 
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-4-1x-min.jpg" itemprop="contentUrl" data-size="2000x1500">
-                    <img src="img/il-4-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
+                    <img class="my-gallery__img--4" src="img/il-4-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
@@ -178,9 +198,9 @@
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
 
-            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a href="img/il-17-1x-min.jpg" itemprop="contentUrl" data-size="4026x1500">
-                    <img src="img/il-17-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
+            <figure class="my-gallery__3span" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a  href="img/il-17-1x-min.jpg" itemprop="contentUrl" data-size="4026x1500">
+                    <img class="my-gallery__img--17" src="img/il-17-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
@@ -222,14 +242,14 @@
 
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-22-1x-min.jpg" itemprop="contentUrl" data-size="1750x1500">
-                    <img src="img/il-22-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
+                    <img class="my-gallery__img--22" src="img/il-22-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
 
-            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <figure class="my-gallery__3span" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-22b-1x-min.jpg" itemprop="contentUrl" data-size="3809x1500">
-                    <img src="img/il-22b-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
+                    <img class="my-gallery__img--22b" src="img/il-22b-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
@@ -268,7 +288,7 @@
         </section>
         <section class="info pt-md pb-md" id="info">
                 <!-- <h3 class="heading-3 info__header">info</h3> -->
-            <p class="info__text ">
+            <p class="info__text " data-id="infoText">
                     Curabitur luctus magna diam, et molestie sapien consequat non. 
                     Sed tincidunt mauris augue, vitae volutpat lacus viverra at. 
                     Vestibulum dictum efficitur pellentesque. Vivamus egestas metus 
@@ -293,12 +313,12 @@
             <img class="info__img"src="img/zdjęcie_twarz-6281.jpg" alt="Emil Litwiniec" ">
 
             <div class="info__contact">
-                <h4 class="info__contact-touch">Get in touch</h4>
-                <p class="info__contact-text"> If you'd like to find out more about me,
+                <h4 class="info__contact-touch" data-id="infoContactTouch">Get in touch</h4>
+                <p class="info__contact-text" data-id="infoContactText"> If you'd like to find out more about me,
                      talk about working together, or just want to say hello, drop me a line!
                 </p>
-                <p class="info__contact-text"> Email: marisa.nb.jensen@gmail.com <br>
-                        Tel: 07730189044
+                <p class="info__contact-text"> Email: emilitwiniec@gmail.com <br>
+                        Tel: (+48) 660 386 908
                         </p>
             </div>
 
@@ -408,6 +428,7 @@
         }
       });
     </script>
+</div>
 </body>
 <script src="main.js"></script>
 
