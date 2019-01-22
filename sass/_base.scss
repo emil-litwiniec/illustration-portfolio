@@ -11,7 +11,7 @@
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 html {
     box-sizing: border-box;
@@ -44,9 +44,15 @@ body {
 // UTILITY CLASSES
 
 .pt-md {
-    padding-top: 15rem;
+    padding-top: 2.2rem;
+    @media only screen and (max-width: 510px) {
+        padding-top: .5rem;
+    }
 }
 
 .pb-md {
     padding-bottom: 15rem;
+    @media only screen and (max-width: 510px) {
+        padding-bottom: 5rem;
+    }
 }
