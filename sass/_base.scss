@@ -9,6 +9,10 @@
     box-sizing: inherit;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 html {
     box-sizing: border-box;
     font-size: 50%; // ==> 8px

@@ -24,6 +24,10 @@
   padding: 0;
   box-sizing: inherit; }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 html {
   box-sizing: border-box;
   font-size: 50%;
@@ -164,6 +168,9 @@ body {
   @media only screen and (max-width: 96.875em) {
     .main {
       grid-template-columns: minmax(10rem, 0.8fr) minmax(50rem, 4.5fr) minmax(10rem, 0.8fr); } }
+  @media only screen and (max-width: 334px) {
+    .main {
+      grid-template-columns: 1fr; } }
 
 .work {
   position: relative;
@@ -193,6 +200,9 @@ body {
       .my-gallery figure {
         height: 100%;
         max-width: 100%; } }
+    @media only screen and (max-width: 334px) {
+      .my-gallery figure {
+        margin: 0 2rem; } }
     .my-gallery figure img {
       object-fit: cover;
       height: 100%;
