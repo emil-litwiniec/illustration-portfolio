@@ -383,7 +383,7 @@ body {
     height: 5vh;
     color: #5f4f4f;
     position: fixed;
-    opacity: 0;
+    opacity: 1;
     z-index: 150;
     transition: all .1s ease-in; }
   .nav-bar__panel {
@@ -444,6 +444,45 @@ body {
         color: #5f4f4f;
         z-index: 180;
         transition: all .1s ease-in-out; }
+
+.fixed-nav-bar {
+  width: 100vw;
+  background-color: #FBFBFB;
+  padding: 1.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  opacity: 1;
+  transition: all .5s ease-in-out; }
+  @media only screen and (min-width: 46.875em) {
+    .fixed-nav-bar {
+      display: none; } }
+  .fixed-nav-bar__logo {
+    height: 5rem; }
+    @media only screen and (max-width: 380px) {
+      .fixed-nav-bar__logo {
+        height: 3rem; } }
+  .fixed-nav-bar__items {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem; }
+    .fixed-nav-bar__items--link {
+      font-size: 2.1rem;
+      cursor: pointer;
+      color: #5f4f4f; }
+      .fixed-nav-bar__items--link a {
+        color: rgba(26, 38, 105, 0.5);
+        text-decoration: none;
+        transition: all .3s ease;
+        padding: 1rem; }
+        .fixed-nav-bar__items--link a:hover {
+          color: #1a2669; }
 
 .active {
   transition: all .5s ease-in-out;

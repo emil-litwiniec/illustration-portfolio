@@ -1,7 +1,7 @@
     const infoPosition = document.querySelector("#info").offsetTop;
     const workPosition = document.querySelector("#work").offsetTop;
-    const infoLink = document.querySelector("#info-link");
-    const workLink = document.querySelector("#work-link");
+    const infoLink = document.querySelectorAll(".info-link");
+    const workLink = document.querySelectorAll(".work-link");
 
 
 // Language translation
@@ -114,13 +114,13 @@ const addClassOnScroll = window.addEventListener("scroll", () => {
 
     
       if (windowPosition > workPosition && windowPosition  < infoPosition) {
-          workLink.classList.add("active");
-          infoLink.classList.remove("active");
+          workLink.forEach(el => el.classList.add("active"));
+          infoLink.forEach(el => el.classList.remove("active"));
     }
 
     if(windowPosition >= infoPosition - threshold) {
-        workLink.classList.remove("active");
-        infoLink.classList.add("active");
+        workLink.forEach(el => el.classList.remove("active"));
+        infoLink.forEach(el => el.classList.add("active"));
     }
 }, false)
 
