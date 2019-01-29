@@ -29,10 +29,10 @@
     
     <header class="header hero rellax" data-rellax-speed="-5">
         
-            <nav class="nav-bar">
+            <nav  class="nav-bar">
                     <ul class="nav-bar__panel">
                             <div class="nav-bar__panel-left">
-                                <img class="nav-bar__panel-left--logo" src="img/logo_white-2x.png" alt="Logo">
+                                <img class="nav-bar__panel-left--logo" src="img/logo_white-2x.png" alt="Logo" id="landing-page">
                             </div>
                             <div class="nav-bar__panel-right">
                                     <!-- <li class="nav-bar__item nav-bar__item--lang">pl/en</li> -->
@@ -46,15 +46,15 @@
             <h1 class="heading-1 ">Emil Litwiniec</h1>
             <h3 class="heading-2" data-id="illustrator">illustrator</h3>
             <div class="language">
-                <a class="language-change" href="#pl" data-pl>pl</a>
-                <a class="language-change" href="#en"  data-en>en</a>
+                <a class="language-change" data-pl>pl</a>
+                <a class="language-change" data-en>en</a>
             </div>
         </div>
         <div class="scroll-down"></div>
     </header>
     <main class="main">
             <div class="logo-container showOnScroll">
-                    <img class="logo-container__logo" src="img/logo_blue-2x.png" alt="Logo">
+                   <img class="logo-container__logo scrollToTop" src="img/logo_blue-2x.png" alt="Logo">
                 </div>
             <div class="nav showOnScroll">
                     <ul class="nav__items">
@@ -62,14 +62,12 @@
                         <li class="nav__items--link"><a class="info-link" href="#info" data-id="info">info</a></li>
                     </ul>
             </div>
-        <section class="work" id="work">
-            <!-- <div class="work__header">
-                <h3 class="heading-3">work</h3>
-            </div> -->
+        <section class="work" >
+
 
             <div class="my-gallery pt-md" itemscope itemtype="http://schema.org/ImageGallery">
 
-            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <figure itemprop="associatedMedia"  itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-1-1x-min.jpg" itemprop="contentUrl" data-size="1500x1500">
                     <img 
                     srcset="img/il-1-thumbnail-small-min.jpg 400w,
@@ -81,15 +79,6 @@
                     itemprop="thumbnail" 
                     alt="Illustration" />
                 </a>
-
-                <!-- <img srcset="elva-fairy-320w.jpg 320w,
-                            elva-fairy-480w.jpg 480w,
-                            elva-fairy-800w.jpg 800w"
-                    sizes="(max-width: 320px) 280px,
-                            (max-width: 480px) 440px,
-                            800px"
-                    src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"> -->
-
                 <figcaption itemprop="caption description" data-nr="1">Chicken</figcaption>
             </figure>
 
@@ -114,7 +103,7 @@
                 <figcaption itemprop="caption description"></figcaption>
             </figure>
 
-            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <figure itemprop="associatedMedia"   id="work"itemscope itemtype="http://schema.org/ImageObject">
                 <a href="img/il-5-1x-min.jpg" itemprop="contentUrl" data-size="1500x1682">
                     <img src="img/il-5-thumbnail-min.jpg" itemprop="thumbnail" alt="Illustration" />
                 </a>
@@ -338,8 +327,13 @@
 
            
             
+            <!-- <ul class="fixed-nav-bar__items">
+                    <img class="fixed-nav-bar__logo scrollToTop" src="img/logo_blue-2x.png" alt="Logo">
+                        <li class="fixed-nav-bar__items--link"><a class="work-link" href="#work" data-id="work">work</a></li>
+                        <li class="fixed-nav-bar__items--link"><a class="info-link" href="#info" data-id="info">info</a></li>
+                    </ul> -->
             <ul class="fixed-nav-bar__items">
-                    <img class="fixed-nav-bar__logo" src="img/logo_blue-2x.png" alt="Logo">
+                    <img class="fixed-nav-bar__logo scrollToTop" src="img/logo_blue-2x.png" alt="Logo">
                         <li class="fixed-nav-bar__items--link"><a class="work-link" href="#work" data-id="work">work</a></li>
                         <li class="fixed-nav-bar__items--link"><a class="info-link" href="#info" data-id="info">info</a></li>
                     </ul>

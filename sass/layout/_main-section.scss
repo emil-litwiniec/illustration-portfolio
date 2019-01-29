@@ -26,11 +26,16 @@
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 1fr 20rem;
+    padding-top: 8rem;
 
     &__header {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+
+    @media only screen and (max-width: 900px) {
+        grid-template-rows: 1fr 10rem;
     }
 }
 
@@ -52,7 +57,7 @@
         grid-auto-rows: 37rem;
     }
     @media only screen and (max-width: 420px) {
-        grid-auto-rows: 31rem;
+        grid-auto-rows: 20rem;
     }
 
     // &__2span {
@@ -182,7 +187,7 @@
             // width: 50%;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0;
+            margin: 2.2rem;
         }
         
     }

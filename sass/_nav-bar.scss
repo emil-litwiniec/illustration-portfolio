@@ -194,7 +194,7 @@
     top: 0;
     z-index: 1000;
 
-    opacity: 1;
+    opacity: 0;
 
     transition: all .5s ease-in-out;
     @media only screen and (min-width: $bp-medium) {

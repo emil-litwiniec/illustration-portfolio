@@ -64,7 +64,7 @@
         @media only screen and (max-width: 510px) {
             padding-left: 0;
             margin-right: 3rem;
-            margin-top: 50vh;
+            margin-top: 40vh;
         }
     }
 }
@@ -100,10 +100,12 @@
         left: 47.5%;
     }
     @media only screen and (max-width: 510px) {
-        left: 46.3%;
+        width: 3rem;
+        height: 3rem;
+        left: 47.5%;
     }
     @media only screen and (max-width: 380px) {
-        left: 44.8%;
+        left: 46.8%;
     }
 }
 

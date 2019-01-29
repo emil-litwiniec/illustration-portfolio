@@ -1,8 +1,26 @@
-    const infoPosition = document.querySelector("#info").offsetTop;
-    const workPosition = document.querySelector("#work").offsetTop;
-    const infoLink = document.querySelectorAll(".info-link");
-    const workLink = document.querySelectorAll(".work-link");
+const infoPosition = document.querySelector("#info").offsetTop;
+const workPosition = document.querySelector("#work").offsetTop;
+const infoLink = document.querySelectorAll(".info-link");
+const workLink = document.querySelectorAll(".work-link");
 
+const ids = document.querySelectorAll("[data-id]");
+const imgs = document.querySelectorAll("[data-nr]");
+
+const pl = document.querySelector("[data-pl]");
+const en = document.querySelector("[data-en]");
+
+const scrollToTopBtns = [...document.querySelectorAll('.scrollToTop')];
+
+
+function scrollToTop() {
+    window.scroll(0, 0);
+}
+
+// function scrollToPosition() {
+//     console.log(this);
+// }
+
+// workLink.addEventListener('click', scrollToPosition);
 
 // Language translation
     const language = {
@@ -32,21 +50,6 @@
             }
     };
 
-    const ids = document.querySelectorAll("[data-id]");
-    const imgs = document.querySelectorAll("[data-nr]");
-    // let arr = Array.from(imgs);
-    
-    // console.log(arr);
-
-    // let changeIdToPl = () =>  {
-    //     ids.forEach((el) => {
-    //         let dataId = el.dataset.id;
-        
-    //         el.innerText = language.pl[dataId];
-    //     })
-    // };
-
-    // changeIdToPl();
 
     let translateToPl = () =>  {
         imgs.forEach((fig) => {
@@ -73,40 +76,22 @@
     };
 
 
-//     // Define language via window hash
-    // const chicken = document.getElementById("chicken");
-    const pl = document.querySelector("[data-pl]");
-    const en = document.querySelector("[data-en]");
+pl.addEventListener('click', translateToPl);
+en.addEventListener('click', translateToEn);
+  
 
-    if(window.location.hash) {
-        if (window.location.hash === "#pl") {
-            translateToPl();
-        } else if (window.location.hash === "#en") {
-            translateToEn();
-        }
-    }
-pl.onclick = function() {
-    if(window.location.hash) {
-        if (window.location.hash === "#pl") {
-            translateToPl();
-            
-        } else if (window.location.hash === "#en") {
-            translateToEn();
-        }
-    }
-    location.reload();
-}
-en.onclick = function() {
-    if(window.location.hash) {
-        if (window.location.hash === "#pl") {
-            translateToPl();
-        } else if (window.location.hash === "#en") {
-            translateToEn();
-        }
-    }
-    location.reload();
-}
+//! /////////// EVENT LISTENERS
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
     
+scrollToTopBtns.forEach((btn) => btn.addEventListener('click', scrollToTop));
 
 const addClassOnScroll = window.addEventListener("scroll", () => {
     let windowPosition = window.scrollY;
@@ -143,21 +128,6 @@ const showOnScroll = window.addEventListener("scroll",function(){
                item.style.display = "none";
            }
     })
-    // target.forEach((h) => {
-
-    // })
-    // if(window.pageYOffset > h){
-    //  target.style.opacity = "1"; 
-    // }
-    // else if(window.pageYOffset < h){
-    //   target.style.opacity = "0";
-    // }
-
-    // if(window.pageYOffset > h - 25) {
-    //     target.style.display = ""
-    // } else if (window.pageYOffset < h - 25) {
-    //     target.style.display = "none";
-    // }
   }, false);
 
   var initPhotoSwipeFromDOM = function(gallerySelector) {

@@ -2,11 +2,11 @@
     font-size: 8rem;
     font-weight: 200;
     color: $color-primary-1;
-    line-height: 75%;
+    line-height: 100%;
     letter-spacing: 15%;
 
     @media only screen and (max-width: 510px) {
-        font-size: 5.5rem;
+        font-size: 5rem;
     }
     
 }
