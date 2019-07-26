@@ -11,7 +11,6 @@
 
 html, body {
     max-width: 100%;
-    // overflow-x: hidden;
 }
 html {
     box-sizing: border-box;
@@ -28,7 +27,6 @@ body {
     font-weight: 300;
     color: #e5e5e5;
     position: relative;
-    // overflow: hidden;
 }
 .container {
     display: grid;
@@ -43,16 +41,34 @@ body {
 
 // UTILITY CLASSES
 
-// .pt-md {
-//     padding-top: 10rem;
-//     @media only screen and (max-width: 510px) {
-//         padding-top: 6rem;
-//     }
-// }
-
 .pb-md {
     padding-bottom: 15rem;
     @media only screen and (max-width: 510px) {
         padding-bottom: 5rem;
+    }
+}
+
+.button {
+    text-decoration: none;
+    background: none;
+    border-style: none;
+    color: $color-primary-1;
+    z-index: 180;
+    padding: 2rem 2rem;
+    transition: all .3s ease;
+    cursor: pointer;
+    font-family: $font-primary;
+    
+    &:hover {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+        transform: translateZ(0);
+        text-shadow: 0 .5rem 2rem rgba($color-blue-1, 1);
+        transform: translateY(-.5rem);
+    }
+
+    &:active {
+        transform: translateY(.5rem);
     }
 }

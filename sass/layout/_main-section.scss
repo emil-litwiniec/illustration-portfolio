@@ -42,7 +42,6 @@
 .my-gallery {
     grid-row: 1 / 2;
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
     grid-auto-rows: 45rem;
     justify-content: space-around;
@@ -60,22 +59,9 @@
         grid-auto-rows: 20rem;
     }
 
-    // &__2span {
-    //     grid-column: span 2;
-    //     width: 100% !important;
-
-    // }
-    // &__3span {
-    //     grid-column: span 3;
-    //     width: 100% !important;
-
-    // }
-
     figure {
         height: 100%;
         max-width: 110%;
-        // height: 100%;
-        // weight: 100%;
         @media only screen and (max-width: $bp-largest) {
             height: 100%;
             max-width: 100%;
@@ -99,9 +85,6 @@
     &__img--22 {
         object-position: 1%;
     }
-    &__img--22b {
-        
-    }
 }
 
 .info {
@@ -114,12 +97,6 @@
     grid-gap: .5rem;
 
     font-family: $font-secondary;
-
-    // &__header {
-    //     grid-column: 1 / -1;
-    //     text-align: center;
-    //     font-family: $font-primary;
-    // }
 
     @media only screen and (max-width: 900px) {
         display: grid;
@@ -170,21 +147,17 @@
         grid-row: 2 / 5;
         grid-column: 3 / 5;
         margin-left: 6rem;
-        // object-fit: cover;
-        // margin-right: 10rem;
         width: 80%;
 
         @media only screen and (max-width: 66.25em) {
             grid-column: 4 / 6 ;
         }
         @media only screen and (max-width: 900px) {
-            // align-self: center;
             justify-self: center;
             width: 20rem;
             height: 20rem;
             grid-row: 2 / 3;
             grid-column: auto;
-            // width: 50%;
             border-radius: 50%;
             object-fit: cover;
             margin: 2.2rem;

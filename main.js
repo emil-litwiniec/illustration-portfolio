@@ -16,19 +16,12 @@ function scrollToTop() {
     window.scroll(0, 0);
 }
 
-// function scrollToPosition() {
-//     console.log(this);
-// }
-
-// workLink.addEventListener('click', scrollToPosition);
-
-// Language translation
     const language = {
         en: {
             illustrator: "illustrator",
             figcaptions: {
-                1: "English caption",
-                2: "frog"
+                1: "",
+                2: ""
             },
             work: "work",
             info: "about me",
@@ -39,8 +32,8 @@ function scrollToTop() {
         pl: {
             illustrator: "ilustrator",
             figcaptions: {
-                1: "Polski opis do zdjęcia",
-                2: "żabka"
+                1: "",
+                2: ""
             },
             work: "prace",
             info: "o mnie",
@@ -76,20 +69,12 @@ function scrollToTop() {
     };
 
 
-pl.addEventListener('click', translateToPl);
-en.addEventListener('click', translateToEn);
-  
-
-//! /////////// EVENT LISTENERS
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+    
+    
+    ///----------  EVENT LISTENERS  -----------///
+    
+    pl.addEventListener('click', translateToPl);
+    en.addEventListener('click', translateToEn);
     
 scrollToTopBtns.forEach((btn) => btn.addEventListener('click', scrollToTop));
 
@@ -130,10 +115,12 @@ const showOnScroll = window.addEventListener("scroll",function(){
     })
   }, false);
 
+
+///----------  PHOTOSWIPE  -----------///
+
+
   var initPhotoSwipeFromDOM = function(gallerySelector) {
 
-    // parse slide data (url, title, size ...) from DOM elements 
-    // (children of gallerySelector)
     var parseThumbnailElements = function(el) {
         var thumbElements = el.childNodes,
             numNodes = thumbElements.length,
@@ -146,8 +133,6 @@ const showOnScroll = window.addEventListener("scroll",function(){
         for(var i = 0; i < numNodes; i++) {
 
             figureEl = thumbElements[i]; // <figure> element
-
-            // include only element nodes 
             if(figureEl.nodeType !== 1) {
                 continue;
             }
