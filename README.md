@@ -51,11 +51,11 @@ npm start
 
 </br>
 <sup>Landing page mobile</sup> </br>
-<img src="readme_screenshots/screenshot_08.png" alt="Screenshot from illustration portfolio" width="700"/>
+<img src="readme_screenshots/screenshot_08.png" alt="Screenshot from illustration portfolio" width="350"/>
 
 </br>
 <sup>Gallery mobile</sup> </br>
-<img src="readme_screenshots/screenshot_07.png" alt="Screenshot from illustration portfolio" width="700"/>
+<img src="readme_screenshots/screenshot_07.png" alt="Screenshot from illustration portfolio" width="350"/>
 
 ## Links
 
