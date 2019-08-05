@@ -25,7 +25,7 @@ function scrollToTop() {
             },
             work: "work",
             info: "about me",
-            infoText: "Village did removed enjoyed explain nor ham saw calling talking. Securing as informed declared or margaret. Joy horrible moreover man feelings own shy. Request norland neither mistake for yet. Between the for morning assured country believe. On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem. Wrong do point avoid by fruit learn or in death. So passage however besides invited comfort elderly be me. Walls began of child civil am heard hoped my. Satisfied pretended mr on do determine by. Old post took and ask seen fact rich. Man entrance settling believed eat joy. Money as drift begin on to. Comparison up insipidity especially discovered me of decisively in surrounded. Points six way enough she its father. Folly sex downs tears ham green forty. ",
+            infoText: "I am an illustrator artist with few years experience. Also I work with graphics and typography. I tend to join analogue 'dirt' with digital precision in my works. I like simple, synthetic shapes and colours. I'm interested in depicting loose, abstract situations, looking at the stories like they have been stopped in time. I am also a fan of postmodernistic architecture of Warsaw and it's neon lights. I have depicted some of these buildings in my illustrations.",
             infoContactTouch: "Get in touch",
             infoContactText: "If you'd like to know more about me or talk about working together. "
         },
@@ -37,7 +37,7 @@ function scrollToTop() {
             },
             work: "prace",
             info: "o mnie",
-            infoText: "Stąd Niesiołowskiemu mocno ognia mają nisko  Wyżółkłych roskrzyżował imał ubóstwiałbym widne ogona Nawet nocą Przed szczególniéj. Spokojniejszych Dojeżdżaczowi skarb Wilna Kiedy rosciągnionych deski prawy Przedstawiając przejrzystość prawo. Niźli Białopiotrowiczem Topoli blisko dworze naród domów granie mnicha. Żołniersczyzny ncci ludu mury tuż czem najpiękniejszym Mnie buku lata nierostrzygniony. Dwór ochłonął szlacheckim ranne niechętnie serce licem innem nagle deski. Koń szli Plac ruch zastępstwie przeskoczyć niby damy rodu krużgankiem okno. Jaki niecierpliwa zwierciadeł wozy owoc dojeżdżacz głębokiém krew przedmiotach Nieszanując. Zaś wyciągniętą Gors susy ubóstwiałbym nieuszanowanie buku zaczerwienione Prześladując woń mój rostrzygnienie. Romansową młodziana przestanku taka Pana Dóm Syna lisa dano Roznoszono Zaszumiał młodzież. ",
+            infoText: "Jestem artystą ilustratorem z kilkuletnim doświadczeniem. Pracowałem również z grafiką i typografią. W moich pracach próbuję łączyć analogowy 'brud' z cyfrową dokładnością. Lubię proste, syntetyczne kształty i zdecydowane rozwiązania kolorystyczne. Interesuje mnie przedstawianie niezobowiązujących sytuacji, oderwanych od rzeczywistości, podglądanie historii i patrzenie na nie, jakby były zawieszone w czasie. Jestem też fanem warszawskiej postmodernistycznej architektury i neonów. Przedstawiłem kilka takich budynków wraz z kultowymi neonami w swoich ilustracjach.",
             infoContactTouch: "Kontakt",
             infoContactText: "Jeśli chciałbyś dowiedzieć się o mnie więcej i porozmawiać o współpracy, daj mi znać!"
             }
